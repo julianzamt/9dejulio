@@ -6,25 +6,16 @@ import { css } from "styled-components/macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 
-import defaultCardImage from "images/shield-icon.svg";
-
-import SupportIconImage from "images/support-icon.svg";
-import ShieldIconImage from "images/shield-icon.svg";
-import CustomizeIconImage from "images/customize-icon.svg";
-import FastIconImage from "images/fast-icon.svg";
-import ReliableIconImage from "images/reliable-icon.svg";
-import SimpleIconImage from "images/simple-icon.svg";
-
 const Container = tw.div`relative bg-primary-800 -mx-8 px-8 text-gray-100`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-16`}
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-8 sm:py-20 md:py-16`}
 `;
 const Subheading = tw(SubheadingBase)`mb-4 text-gray-400`;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeading)`w-full text-3xl sm:text-4xl`;
 const Description = tw(SectionDescription)`w-full text-center text-gray-300`;
 
-const VerticalSpacer = tw.div`mt-10 w-full`;
+const VerticalSpacer = tw.div`sm:mt-10 w-full`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 max-w-xs flex`}
@@ -68,21 +59,6 @@ export default ({
    *  If a key for a particular card is not provided, a default value is used
    */
 
-  const defaultCards = [
-    {
-      imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security infrastructure."
-    },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
-  ];
-
-  if (!cards) cards = defaultCards;
-
   return (
     <Container>
       <ThreeColumnContainer>
@@ -94,12 +70,12 @@ export default ({
           <Column key={i}>
             <Card>
               <span className="imageContainer">
-                <CardImg src={card.imageSrc || defaultCardImage} alt="" />
+                <CardImg src={card.imageSrc} alt="icon" />
               </span>
               <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
+                <span className="title">{card.title}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                  {card.description}
                 </p>
               </span>
             </Card>

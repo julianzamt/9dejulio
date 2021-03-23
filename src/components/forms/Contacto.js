@@ -9,7 +9,8 @@ import { ThreeDots } from 'svg-loaders-react'
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
-const Title = tw.h2`sm:inline-block`
+const Title = tw.h2`sm:inline-block text-center sm:text-left`
+const SubTitle = tw.h5`text-xs text-center -mx-8`
 
 const FormContainer = styled.div`
   ${tw`p-10 sm:p-12 md:p-16 bg-primary-500 text-gray-100 rounded-lg relative`}
@@ -67,6 +68,7 @@ export default () => {
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <Title>Contactanos</Title>
+            <SubTitle>Llamanos al 4931-1578, escribinos a institutoprivado9dejulio@gmail.com, acercate a nuestras oficinas en La Rioja 660, o dejanos un mensaje a través de este formulario. ¡Responderemos a la brevedad!</SubTitle>
             <form onSubmit={sendEmail}>
               <TwoColumn>
                 <Column>

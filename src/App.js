@@ -45,7 +45,7 @@ export default function App() {
     <BrowserRouter>
       <AnimationRevealPage disabled>
         <Hero />
-        <QuienesSomos />
+        <QuienesSomos /> {/* Valores está dentro de Quienes somos*/}
         <PlanDeEstudios />
         <Docentes />
         <Ubicacion />

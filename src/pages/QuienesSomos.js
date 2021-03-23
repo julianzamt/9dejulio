@@ -27,12 +27,12 @@ export default () => {
         buttonRounded={false}
         textOnLeft={false}
         imageSrc={quienesSomosImg2}
-        description="Trabajamos con grupos reducidos, priorizando los aspectos humanos y sociales de los/as adolescentes. Nuestro objetivo: que descubran y fortalezcan recursos y habilidades, ampliando horizontes, cooperando con sus pares."
+        description="Trabajamos con grupos reducidos, priorizando los aspectos humanos y sociales de los/as adolescentes. Nuestro objetivo: que descubran y fortalezcan recursos y habilidades, ampliando sus horizontes, cooperando con sus pares."
       />
       <Valores
         subheading={<Subheading>Nuestros valores</Subheading>}
         heading="Cooperativismo, autonomía e inclusión."
-        description="Buscamos brindar a nuestros estudiantes la posibilidad de posicionarse como sujetos autónomos y solidarios. Construir las herramientas para llevar a cabo sus proyectos, tanto a nivel profesional como personal."
+        description="Buscamos brindar a nuestros estudiantes la posibilidad de posicionarse como sujetos autónomos y solidarios. Construir juntos las herramientas para llevar a cabo sus proyectos, tanto a nivel profesional como personal."
         cards={[
           {
             imageSrc: GroupIcon,

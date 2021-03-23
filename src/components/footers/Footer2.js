@@ -10,14 +10,14 @@ import { HashLink } from 'react-router-hash-link';
 
 const Container = tw.div`relative bg-primary-900 text-gray-300 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
-const FiveColumns = tw.div`flex flex-wrap justify-between`;
+const FiveColumns = tw.div`flex flex-wrap justify-evenly`;
 
-const Column = tw.div`w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
-const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5`;
+const Column = tw.div`w-full sm:w-1/2 md:w-1/3 mb-6 md:mb-0 text-sm sm:text-base text-center md:text-left`;
+const CompanyColumn = tw.div`text-center md:text-left mb-8 lg:mb-0 w-full lg:w-1/5`;
 
 const ColumnHeading = tw.h5`font-bold uppercase`;
 
-const LinkList = tw.ul`mt-4 text-sm font-medium`;
+const LinkList = tw.ul`sm:mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300`;
 
@@ -97,7 +97,7 @@ export default () => {
               </LinkListItem>
               <LinkListItem>
                 <HashLink to="#contacto" smooth={true}>
-                  <Link>Formulario de contacto</Link>
+                  <Link>Contacto</Link>
                 </HashLink>
               </LinkListItem>
             </LinkList>

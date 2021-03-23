@@ -26,7 +26,7 @@ const StyledHeader = styled(Header)`
   }
 `;
 
-const TwoColumn = tw.div`pt-20 pb-20 px-4 flex justify-between items-center flex-col lg:flex-row`;
+const TwoColumn = tw.div`sm:pt-20 sm:pb-20 px-4 h-full flex flex-col items-center justify-around sm:justify-between  lg:flex-row`;
 const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 const RightColumn = tw.div`flex justify-center w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
 
@@ -45,7 +45,7 @@ const SlantedBackground = styled.span`
   }
 `;
 
-const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
+const Notification = tw.span`text-center sm:inline-block my-4 pl-3 py-1 text-gray-100 sm:border-l-4 sm:border-blue-500 font-medium text-sm`;
 
 const SubTitle = tw.div`mt-4 text-gray-200 font-medium text-sm border-t border-primary-300 py-2`
 
