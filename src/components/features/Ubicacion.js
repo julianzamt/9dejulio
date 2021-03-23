@@ -5,6 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-32 items-center`;
@@ -23,6 +24,10 @@ const DecoratorBlob = styled(SvgDotPattern)(props => [
 
 const DecoratorBlobPink = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute bottom-0 left-0 w-64 opacity-25 transform -translate-x-40 translate-y-56`}
+`;
+
+const DecoratorBlobPink2 = styled(SvgDecoratorBlob6)`
+  ${tw`pointer-events-none absolute top-0 right-0 w-64 opacity-25 transform translate-x-40 -translate-y-56`}
 `;
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
@@ -65,6 +70,7 @@ export default ({
         </TextColumn>
       </TwoColumn>
       <DecoratorBlobPink />
+      <DecoratorBlobPink2 />
     </Container>
   );
 };

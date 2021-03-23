@@ -27,13 +27,13 @@ const Description = tw(SectionDescription)`w-full text-center text-gray-300`;
 const VerticalSpacer = tw.div`mt-10 w-full`;
 
 const Column = styled.div`
-  ${tw`md:w-1/2 lg:w-1/3 max-w-xs`}
+  ${tw`md:w-1/2 lg:w-1/3 max-w-xs flex`}
 `;
 
 const CardImg = tw.img`fill-current`
 
 const Card = styled.div`
-  ${tw`flex flex-col items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8 text-pink-500`}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-2 py-8 text-pink-500`}
   .imageContainer {
     ${tw`bg-gray-100 text-center rounded-full p-5 flex-shrink-0 text-pink-500 fill-current`}
     img {

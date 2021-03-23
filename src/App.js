@@ -38,7 +38,7 @@ import Footer from "components/footers/Footer2.js";
 // import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 // import Testimonial from "components/testimonials/SimplePrimaryBackground.js";
 
-import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 export default function App() {
   return (

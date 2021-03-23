@@ -2,8 +2,8 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import portadaImg from "../../images/Portada_9dejulio.jpg"
-import innerHero from "../../images/Hero_inside_9dejulio.jpg"
+import portadaImg from "../../images/legislatura/IMG-20171201-WA0039.jpg"
+import innerHero from "../../images/grupal.png"
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import { HashLink } from 'react-router-hash-link';
 

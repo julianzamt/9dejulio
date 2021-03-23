@@ -7,12 +7,8 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { SectionDescription } from "components/misc/Typography.js";
 
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
 
-import SupportIconImage from "images/support-icon.svg";
-import CustomizeIconImage from "images/customize-icon.svg";
-import FastIconImage from "images/fast-icon.svg";
-import ReliableIconImage from "images/reliable-icon.svg";
-import SimpleIconImage from "images/simple-icon.svg";
 
 const Container = tw.div`relative`;
 
@@ -55,6 +51,11 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 
+const DecoratorBlob2 = styled(SvgDecoratorBlob6)`
+${tw`pointer-events-none absolute left-0 top-0 w-64 opacity-25 transform -translate-x-32 -translate-y-48`}
+`
+
+
 export default ({ cards = null, heading = "Plan de estudios", subheading = "Bachiller en Economía y Administración", description = "El plan de estudios se divide en dos ciclos: Ciclo Básico (1ro y 2do año) y Ciclo Orientado (3ro, 4to y 5to)" }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -67,33 +68,18 @@ export default ({ cards = null, heading = "Plan de estudios", subheading = "Bach
   cards = [
     {
       title: "Ciclo Básico",
-      description: "Es parte de la formación general común a todos los bachilleratos. En el área artística, los alumnos pueden optar entre Música y Artes visuales, con enfoques prácticos que fomentan la integración grupal."
+      description: "La Formación General común a todos los bachilleratos."
     },
     {
       title: "Ciclo Orientado",
-      description: "Está constituído por la materias de la formación general y las de formación orientada: Economía, Organizaciones, Sistemas administrativos, Derecho, Sistemas de información contable y Contabilidad patrimonial y de gestión."
+      description: "A las materias de la Formación General, sumamos la Formación Orientada: Economía, Organizaciones, Sistemas administrativos, Derecho, Sistemas de información contable y Contabilidad patrimonial y de gestión."
     },
     {
       title: "EDI",
-      description: "El Espacio de Definición Institucional (EDI) es Cooperativismo. Recorre los 5 años del plan y brinda a los estudiantes conocimientos y experiencias prácticas de formación, con análisis de casos concretos y equipos de trabajo."
+      description: "Durante los cinco años de carrera, nuestros alumnos se forman en Cooperativismo, nuestro Espacio de Definición Institucional. Esta materia brinda la posibilidad de vivir experiencias prácticas de trabajo en equipo, a la par del análisis de casos concretos."
     },
 
   ]
-
-  const defaultCards = [
-    {
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security."
-    },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
-  ];
-
-  if (!cards) cards = defaultCards;
-
 
   return (
     <Container id="plan_de_estudios">
@@ -119,6 +105,7 @@ export default ({ cards = null, heading = "Plan de estudios", subheading = "Bach
         ))}
       </ThreeColumnContainer>
       <DecoratorBlob />
+      <DecoratorBlob2 />
     </Container>
   );
 };
