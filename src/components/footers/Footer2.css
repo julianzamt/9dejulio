@@ -1,0 +1,8 @@
+.ley {
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out
+}
+
+.ley:hover {
+    color: pink;
+    font-size: 1.01em;
+}

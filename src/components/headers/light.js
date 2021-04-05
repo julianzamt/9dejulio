@@ -9,6 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo_9dejulio.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import "./light.css"
 
 const Header = tw.header`
   flex justify-between items-center
@@ -23,13 +24,13 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  hover:text-pink-500
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded sm:bg-primary-500 sm:text-gray-100
-  sm:hocus:bg-primary-700 sm:hocus:text-gray-200 focus:shadow-outline
+  px-8 py-1 rounded bg-primary-500 text-gray-100
+  hocus:bg-pink-400 hocus:text-gray-700 focus:shadow-outline
   border-b-0
 `;
 
@@ -93,10 +94,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
         <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks} onClick={toggleNavbar}>
+          <CloseIcon tw="w-6 h-6" className="closeIcon" />
           {links}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
+          {showNavLinks ? null : <MenuIcon tw="w-6 h-6" />}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>

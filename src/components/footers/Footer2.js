@@ -7,6 +7,7 @@ import logo from "../../images/logo_9dejulio.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 import { HashLink } from 'react-router-hash-link';
+import "./Footer2.css"
 
 const Container = tw.div`relative bg-primary-900 text-gray-300 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
@@ -117,6 +118,7 @@ export default () => {
         <Divider />
         <CopyrightAndCompanyInfoRow>
           <CopyrightNotice>&copy; Copyright 2021, Julián Zamt. React template Treact Inc. All Rights Reserved</CopyrightNotice>
+          <CopyrightNotice><a className="ley" href="http://www.sinigep.info/docs/adjuntos/Ley268120201001153427.pdf" target="_blank" rel="noopener noreferrer">Ley nº 2.681 - Normas para Institutos Educativos Privados</a></CopyrightNotice>
         </CopyrightAndCompanyInfoRow>
       </Content>
     </Container>

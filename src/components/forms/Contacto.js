@@ -5,12 +5,13 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg"
 import emailjs from 'emailjs-com';
 import { ThreeDots } from 'svg-loaders-react'
+import "./Contacto.css"
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Title = tw.h2`sm:inline-block text-center sm:text-left`
-const SubTitle = tw.h5`text-xs text-center -mx-8`
+const SubTitle = tw.h5`text-xs text-center -mx-8 py-4`
 
 const FormContainer = styled.div`
   ${tw`p-10 sm:p-12 md:p-16 bg-primary-500 text-gray-100 rounded-lg relative`}
@@ -46,6 +47,9 @@ export default () => {
   // Send Form message Logic
   const [isLoading, setIsLoading] = useState(false)
   const [feedback, setFeedback] = useState(false)
+  const [user_name, setUser_name] = useState('')
+  const [user_email, setUser_email] = useState('')
+  const [message, setMessage] = useState('')
 
   function sendEmail(e) {
     e.preventDefault();
@@ -55,7 +59,12 @@ export default () => {
         console.log(result.text);
         setIsLoading(false);
         setFeedback(true)
-        setTimeout(() => setFeedback(false), 5000)
+        setTimeout(() => {
+          setFeedback(false)
+          setUser_name('')
+          setUser_email('')
+          setMessage('')
+        }, 5000)
       }, (error) => {
         console.log(error.text);
         setIsLoading(false);
@@ -68,30 +77,30 @@ export default () => {
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <Title>Contactanos</Title>
-            <SubTitle>Llamanos al 4931-1578, escribinos a institutoprivado9dejulio@gmail.com, acercate a nuestras oficinas en La Rioja 660, o dejanos un mensaje a través de este formulario. ¡Responderemos a la brevedad!</SubTitle>
             <form onSubmit={sendEmail}>
               <TwoColumn>
                 <Column>
                   <InputContainer>
                     <Label htmlFor="user_name">Nombre y Apellido</Label>
-                    <Input id="user_name" type="text" name="user_name" placeholder="Tu nombre aquí" />
+                    <Input id="user_name" type="text" name="user_name" value={user_name} placeholder="Tu nombre aquí" onChange={(e) => setUser_name(e.target.value)} />
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="user_email">Email</Label>
-                    <Input id="user_email" type="email" name="user_email" placeholder="Tu email aquí" />
+                    <Input id="user_email" type="email" name="user_email" value={user_email} placeholder="Tu email aquí" onChange={(e) => setUser_email(e.target.value)} />
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="message">Mensaje</Label>
-                    <TextArea id="message" name="message" placeholder="No olvides dejar mail y/o teléfono y horario de contacto. ¡Gracias!" />
+                    <TextArea id="message" name="message" value={message} placeholder="No olvides dejar mail y/o teléfono y horario de contacto. ¡Gracias!" onChange={(e) => setMessage(e.target.value)} />
                   </InputContainer>
                 </Column>
               </TwoColumn>
               <ButtonFeedbackContainer>
-                {isLoading ? <SubmitButton><ThreeDots fill="pink" width="70px" /></SubmitButton> : <SubmitButton type="submit" value="Submit">Enviar</SubmitButton>}
-                {feedback ? <div style={{ color: "pink", marginLeft: "1em" }}>¡Gracias! A la brevedad nos pondremos en contacto.</div> : null}
+                {isLoading ? <SubmitButton><ThreeDots fill="pink" width="70px" height="1.3em" /></SubmitButton> : <SubmitButton type="submit" value="Submit">Enviar</SubmitButton>}
+                {feedback ? <div className="feedback__contact">¡Enviado! A la brevedad nos pondremos en contacto.</div> : null}
               </ButtonFeedbackContainer>
+              <SubTitle>4931-1578 - institutoprivado9dejulio@gmail.com - La Rioja 660, CABA</SubTitle>
             </form>
           </div>
           <SvgDotPattern1 />
