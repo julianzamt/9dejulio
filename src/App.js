@@ -28,7 +28,7 @@ import Hero from "components/hero/Hero.js";
 import PlanDeEstudios from "components/features/PlanDeEstudios.js";
 import QuienesSomos from "pages/QuienesSomos.js";
 import Ubicacion from "components/features/Ubicacion.js";
-import Docentes from "components/features/Docentes.js";
+import PlantelDocente from "components/features/PlantelDocente.js";
 import Contacto from "components/forms/Contacto.js";
 import Footer from "components/footers/Footer2.js";
 
@@ -45,13 +45,13 @@ export default function App() {
     <BrowserRouter>
       <AnimationRevealPage disabled>
         <Hero />
-        <QuienesSomos /> {/* Valores está dentro de Quienes somos*/}
+        <QuienesSomos />
+        <PlantelDocente />
         <PlanDeEstudios />
-        <Docentes />
         <Ubicacion />
         <Contacto />
         <Footer />
       </AnimationRevealPage>
     </BrowserRouter>
-  )
+  );
 }

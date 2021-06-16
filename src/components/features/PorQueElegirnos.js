@@ -21,19 +21,19 @@ const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 max-w-xs flex`}
 `;
 
-const CardImg = tw.img`fill-current`
+const CardImg = tw.img`fill-current`;
 
 const Card = styled.div`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-2 py-8 text-pink-500`}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-2 py-5 text-yellow-500`}
   .imageContainer {
-    ${tw`bg-gray-100 text-center rounded-full p-5 flex-shrink-0 text-pink-500 fill-current`}
+    ${tw`bg-gray-100 text-center rounded-full p-3 flex-shrink-0`}
     img {
-      ${tw`w-6 h-6 fill-current text-pink-500`}
+      ${tw`w-6 h-6`}
     }
   }
 
   .textContainer {
-    ${tw`mt-6`}
+    ${tw`mt-4 text-sm`}
   }
 
   .title {
@@ -41,7 +41,7 @@ const Card = styled.div`
   }
 
   .description {
-    ${tw`mt-2 font-normal text-gray-400 leading-snug`}
+    ${tw`my-2 font-normal text-gray-400 leading-snug`}
   }
 `;
 
@@ -49,7 +49,7 @@ export default ({
   cards = null,
   heading = "Amazing Features",
   subheading = "Nuestros Valores",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -74,9 +74,7 @@ export default ({
               </span>
               <span className="textContainer">
                 <span className="title">{card.title}</span>
-                <p className="description">
-                  {card.description}
-                </p>
+                <p className="description">{card.description}</p>
               </span>
             </Card>
           </Column>

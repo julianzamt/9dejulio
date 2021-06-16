@@ -6,11 +6,11 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import logo from "../../images/logo_9dejulio.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
-import { HashLink } from 'react-router-hash-link';
-import "./Footer2.css"
+import { HashLink } from "react-router-hash-link";
+import "./Footer2.css";
 
 const Container = tw.div`relative bg-primary-900 text-gray-300 -mx-8 -mb-8 px-8`;
-const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
+const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
 const FiveColumns = tw.div`flex flex-wrap justify-evenly`;
 
 const Column = tw.div`w-full sm:w-1/2 md:w-1/3 mb-6 md:mb-0 text-sm sm:text-base text-center md:text-left`;
@@ -36,10 +36,10 @@ const SocialLink = styled.a`
   }
 `;
 
-const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col sm:flex-row justify-between items-center`
-const CopyrightNotice = tw.div`text-xs`
+const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col sm:flex-row justify-between items-center`;
+const CopyrightNotice = tw.div`text-xs text-center`;
 
-const Divider = tw.div`my-8 border-b-2 border-pink-300 bg-pink-400`
+const Divider = tw.div`my-8 border-b-2 border-yellow-500`;
 export default () => {
   return (
     <Container>
@@ -50,12 +50,7 @@ export default () => {
               <LogoImg src={logo} />
               <LogoText>Instituto Privado 9 de Julio</LogoText>
             </LogoContainer>
-            <CompanyAddress>
-              La Rioja 660
-              CABA
-              4931-1578
-              
-            </CompanyAddress>
+            <CompanyAddress>La Rioja 660 CABA 4931-1578</CompanyAddress>
             <SocialLinksContainer>
               <SocialLink href="https://facebook.com">
                 <FacebookIcon />
@@ -69,27 +64,27 @@ export default () => {
             <LinkList>
               <LinkListItem>
                 <HashLink to="#" smooth={true}>
-                 <Link>Inicio</Link>
+                  <Link>Inicio</Link>
                 </HashLink>
               </LinkListItem>
               <LinkListItem>
                 <HashLink to="#quienes_somos" smooth={true}>
-                 <Link>Quiénes somos</Link>
+                  <Link>Quiénes somos</Link>
                 </HashLink>
               </LinkListItem>
               <LinkListItem>
                 <HashLink to="#plan_de_estudios" smooth={true}>
-                 <Link >Plan de estudios</Link>
+                  <Link>Plan de estudios</Link>
                 </HashLink>
               </LinkListItem>
-              </LinkList>
-            </Column>
-            <Column>
+            </LinkList>
+          </Column>
+          <Column>
             <LinkList>
-            <LinkListItem>
-              <HashLink to="#docentes" smooth={true}>
-                <Link>Docentes</Link>
-              </HashLink>
+              <LinkListItem>
+                <HashLink to="#docentes" smooth={true}>
+                  <Link>Docentes</Link>
+                </HashLink>
               </LinkListItem>
               <LinkListItem>
                 <HashLink to="#ubicacion" smooth={true}>
@@ -106,9 +101,7 @@ export default () => {
           <Column>
             <ColumnHeading>Contacto</ColumnHeading>
             <LinkList>
-              <LinkListItem>
-                (011) 4931-1578
-              </LinkListItem>
+              <LinkListItem>(011) 4931-1578</LinkListItem>
               <LinkListItem>
                 <Link href="mailto:institutoprivado9dejulio@gmail.com">institutoprivado9dejulio@gmail.com</Link>
               </LinkListItem>
@@ -117,9 +110,16 @@ export default () => {
         </FiveColumns>
         <Divider />
         <CopyrightAndCompanyInfoRow>
-          <CopyrightNotice>&copy; Copyright 2021, Julián Zamt. React template Treact Inc. All Rights Reserved</CopyrightNotice>
-          <CopyrightNotice><a className="ley" href="http://www.sinigep.info/docs/adjuntos/Ley268120201001153427.pdf" target="_blank" rel="noopener noreferrer">Ley nº 2.681 - Normas para Institutos Educativos Privados</a></CopyrightNotice>
+          <CopyrightNotice>
+            &copy; 2021 Julián Zamt. <br></br>React template Treact Inc.<br></br>
+          </CopyrightNotice>
         </CopyrightAndCompanyInfoRow>
+        <Divider />
+        <CopyrightNotice>
+          <a className="ley" href="http://www.sinigep.info/docs/adjuntos/Ley268120201001153427.pdf" target="_blank" rel="noopener noreferrer">
+            Ley nº 2.681 - Normas para Institutos Educativos Privados
+          </a>
+        </CopyrightNotice>
       </Content>
     </Container>
   );

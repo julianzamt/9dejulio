@@ -9,7 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo_9dejulio.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-import "./light.css"
+import "./light.css";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -29,16 +29,15 @@ export const NavLink = tw.a`
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-1 rounded bg-primary-500 text-gray-100
-  hocus:bg-pink-400 hocus:text-gray-700 focus:shadow-outline
+  px-8 py-1 rounded bg-primary-300 text-gray-100
   border-b-0
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`w-8 mr-3`}
   }
 `;
 
@@ -47,9 +46,9 @@ export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-2 text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
-    ${tw`flex flex-col items-center`}
+    ${tw`flex flex-col items-center mb-4`}
   }
 `);
 
@@ -78,7 +77,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      9 de Julio
+      Instituto Privado 9 de Julio
     </LogoLink>
   );
 
@@ -93,8 +92,12 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
-        <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks} onClick={toggleNavbar}>
-          <CloseIcon tw="w-6 h-6" className="closeIcon" />
+        <MobileNavLinks
+          initial={{ x: "150%", display: "none" }}
+          animate={animation}
+          css={collapseBreakpointCss.mobileNavLinks}
+          onClick={toggleNavbar}>
+          <CloseIcon tw="w-6 h-6 fixed" className="closeIcon" />
           {links}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
@@ -115,21 +118,21 @@ const collapseBreakPointCssMap = {
   sm: {
     mobileNavLinks: tw`sm:hidden`,
     desktopNavLinks: tw`sm:flex`,
-    mobileNavLinksContainer: tw`sm:hidden`
+    mobileNavLinksContainer: tw`sm:hidden`,
   },
   md: {
     mobileNavLinks: tw`md:hidden`,
     desktopNavLinks: tw`md:flex`,
-    mobileNavLinksContainer: tw`md:hidden`
+    mobileNavLinksContainer: tw`md:hidden`,
   },
   lg: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
+    mobileNavLinksContainer: tw`lg:hidden`,
   },
   xl: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
-  }
+    mobileNavLinksContainer: tw`lg:hidden`,
+  },
 };

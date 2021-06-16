@@ -8,7 +8,9 @@ import { SectionDescription } from "components/misc/Typography.js";
 
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
-
+import planDeEstudiosCicloBasicoImg from "../../images/new/cicloBasico_500.jpg";
+import planDeEstudiosCicloOrientadoImg from "../../images/new/ciclo_orientado_500.jpg";
+import planDeEstudiosEDIImg from "../../images/new/edi_500.jpg";
 
 const Container = tw.div`relative`;
 
@@ -19,23 +21,27 @@ const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full text-3xl sm:text-4xl`;
 const Description = tw(SectionDescription)`w-full text-center`;
 
-const VerticalSpacer = tw.div`mt-10 w-full`
+const VerticalSpacer = tw.div`mt-10 w-full`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 max-w-sm mb-8`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-4 border rounded-2xl bg-gray-100`}
+  ${tw`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 pb-2 border rounded-2xl bg-gray-100`}
   .imageContainer {
     ${tw`border text-center rounded-full p-5 flex-shrink-0`}
     img {
-      ${tw`w-6 h-6`}
+      ${tw`w-4 h-4`}
     }
   }
 
   .textContainer {
     ${tw`sm:ml-4 mt-4 sm:mt-2`}
+  }
+
+  .img {
+    ${tw`border rounded-lg mb-4`}
   }
 
   .title {
@@ -52,11 +58,15 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 const DecoratorBlob2 = styled(SvgDecoratorBlob6)`
-${tw`pointer-events-none absolute left-0 top-0 w-64 opacity-25 transform -translate-x-32 -translate-y-48`}
-`
+  ${tw`pointer-events-none absolute left-0 top-0 w-64 opacity-25 transform -translate-x-32 -translate-y-48`}
+`;
 
-
-export default ({ cards = null, heading = "Plan de estudios", subheading = "Bachiller en Economía y Administración", description = "El plan de estudios se divide en dos ciclos: Ciclo Básico (1ro y 2do año) y Ciclo Orientado (3ro, 4to y 5to)" }) => {
+export default ({
+  cards = null,
+  heading = "Bachiller en Economía y Administración",
+  subheading = "Plan de Estudios",
+  description = "El plan de estudios se divide en dos ciclos: Básico y Orientado",
+}) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -67,19 +77,23 @@ export default ({ cards = null, heading = "Plan de estudios", subheading = "Bach
 
   cards = [
     {
+      imageSrc: planDeEstudiosCicloBasicoImg,
       title: "Ciclo Básico",
-      description: "La Formación General común a todos los bachilleratos."
+      description: "Comprende 1er y 2do año. Formación General común a todos los bachilleratos, más el EDI.",
     },
     {
+      imageSrc: planDeEstudiosCicloOrientadoImg,
       title: "Ciclo Orientado",
-      description: "A las materias de la Formación General, sumamos la Formación Orientada: Economía, Organizaciones, Sistemas administrativos, Derecho, Sistemas de información contable y Contabilidad patrimonial y de gestión."
+      description:
+        "Al plan común, sumamos la Formación Orientada: Economía, Organizaciones, Sistemas administrativos, Derecho, Sistemas de información contable y Contabilidad patrimonial y de gestión.",
     },
     {
-      title: "EDI",
-      description: "Durante los cinco años de carrera, nuestros alumnos se forman en Cooperativismo, nuestro Espacio de Definición Institucional. Esta materia brinda la posibilidad de vivir experiencias prácticas de trabajo en equipo, a la par del análisis de casos concretos."
+      imageSrc: planDeEstudiosEDIImg,
+      title: "Espacio de Definición Institucional (EDI)",
+      description:
+        "El EDI (Cooperativismo) es la materia que acompaña a los estudiantes durante toda su formación. Brinda la posibilidad de vivir experiencias prácticas y de realizar análisis de casos concretos.",
     },
-
-  ]
+  ];
 
   return (
     <Container id="plan_de_estudios">
@@ -91,14 +105,10 @@ export default ({ cards = null, heading = "Plan de estudios", subheading = "Bach
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
-              {/* <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
-              </span> */}
               <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                </p>
+                <img className="img" src={card.imageSrc} alt="clase"></img>
+                <span className="title">{card.title}</span>
+                <p className="description">{card.description}</p>
               </span>
             </Card>
           </Column>
