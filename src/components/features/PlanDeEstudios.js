@@ -5,17 +5,14 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-
-import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
-import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
 import planDeEstudiosCicloBasicoImg from "../../images/new/cicloBasico_500.jpg";
 import planDeEstudiosCicloOrientadoImg from "../../images/new/ciclo_orientado_500.jpg";
 import planDeEstudiosEDIImg from "../../images/new/edi_500.jpg";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative -mx-8 px-8 py-10 sm:py-20 bg-yellow-500 flex flex-col items-center`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg -mx-8 px-8 py-10 sm:py-20 bg-yellow-400`}
+  ${tw`flex flex-col items-center w-full lg:flex-row lg:items-start`}
 `;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full text-3xl sm:text-4xl`;
@@ -24,7 +21,7 @@ const Description = tw(SectionDescription)`w-full text-center`;
 const VerticalSpacer = tw.div`mt-10 w-full`;
 
 const Column = styled.div`
-  ${tw`lg:w-1/3 max-w-sm mb-8`}
+  ${tw`lg:w-1/3 max-w-sm m-8`}
 `;
 
 const Card = styled.div`
@@ -49,16 +46,8 @@ const Card = styled.div`
   }
 
   .description {
-    ${tw`mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose`}
+    ${tw`mt-1 sm:mt-4 font-light text-sm leading-loose`}
   }
-`;
-
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
-`;
-
-const DecoratorBlob2 = styled(SvgDecoratorBlob6)`
-  ${tw`pointer-events-none absolute left-0 top-0 w-64 opacity-25 transform -translate-x-32 -translate-y-48`}
 `;
 
 export default ({
@@ -67,14 +56,6 @@ export default ({
   subheading = "Plan de Estudios",
   description = "El plan de estudios se divide en dos ciclos: Básico y Orientado",
 }) => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
-
   cards = [
     {
       imageSrc: planDeEstudiosCicloBasicoImg,
@@ -97,11 +78,11 @@ export default ({
 
   return (
     <Container id="plan_de_estudios">
+      {subheading && <Subheading>{subheading}</Subheading>}
+      <Heading>{heading}</Heading>
+      {description && <Description>{description}</Description>}
+      <VerticalSpacer />
       <ThreeColumnContainer>
-        {subheading && <Subheading>{subheading}</Subheading>}
-        <Heading>{heading}</Heading>
-        {description && <Description>{description}</Description>}
-        <VerticalSpacer />
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -114,8 +95,6 @@ export default ({
           </Column>
         ))}
       </ThreeColumnContainer>
-      <DecoratorBlob />
-      <DecoratorBlob2 />
     </Container>
   );
 };

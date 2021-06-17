@@ -11,7 +11,7 @@ const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Title = tw.h2`text-center`;
-const SubTitle = tw.h5`text-xs text-center -mx-8 mt-2 p-4 `;
+const SubTitle = tw.h5`text-xs lg:text-lg text-center -mx-8 mt-2 p-4 `;
 
 const FormContainer = styled.div`
   ${tw`p-10 sm:p-12 md:p-16 bg-primary-500 text-gray-100 rounded-lg relative`}
@@ -43,7 +43,7 @@ const SvgDotPattern1 = tw(
   SvgDotPatternIcon
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
-const ButtonFeedbackContainer = tw.div`flex items-baseline md:justify-center lg:justify-between`;
+const ButtonFeedbackContainer = tw.div`flex items-baseline md:justify-center`;
 
 const MESSAGE_PLACEHOLDER = "Si desea que lo contactemos telefónicamente, por favor indique su número.";
 
@@ -127,7 +127,7 @@ export default () => {
                 {feedback ? <div className="feedback__contact">{feedback}</div> : null}
               </ButtonFeedbackContainer>
               <SubTitle>
-                4931-1578 <br></br>institutoprivado9dejulio@gmail.com <br></br>La Rioja 660, CABA
+                (011) 4931-1578 <br></br>institutoprivado9dejulio@gmail.com <br></br>La Rioja 660, CABA
               </SubTitle>
             </form>
           </div>

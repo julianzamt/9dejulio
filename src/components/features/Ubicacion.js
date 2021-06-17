@@ -18,20 +18,10 @@ const TextColumn = styled(Column)(props => [
 
 const Map = tw.iframe`rounded-xl shadow w-full h-64`;
 
-const DecoratorBlob = styled(SvgDotPattern)(props => [
-  tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-600 -z-10`,
-]);
-
 const DecoratorBlobPink = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute bottom-0 left-0 w-64 opacity-25 transform -translate-x-40 translate-y-56`}
 `;
-
-const DecoratorBlobPink2 = styled(SvgDecoratorBlob6)`
-  ${tw`pointer-events-none absolute top-0 right-0 w-64 opacity-25 transform translate-x-40 -translate-y-56`}
-`;
-
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
-
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
@@ -60,11 +50,9 @@ export default ({
         </TextColumn>
         <ImageColumn>
           <Map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4718913241236!2d-58.41011868511244!3d-34.61751346573446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccafb1d63523d%3A0xa718d663d3f2da8e!2sLa%20Rioja%20660%2C%20C1221%20ACD%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1616012114257!5m2!1sen!2sar" />
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
       </TwoColumn>
       <DecoratorBlobPink />
-      <DecoratorBlobPink2 />
     </Container>
   );
 };

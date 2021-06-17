@@ -19,7 +19,7 @@ const Image = styled.img(props => [props.imageRounded && tw`rounded`, props.imag
 
 const DecoratorBlob = tw(
   SvgDotPattern
-)`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-600 -z-10`;
+)`w-20 h-20 lg:w-24 lg:h-24 lg:mr-12 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-600 -z-10`;
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
@@ -30,7 +30,7 @@ const Description = tw.p`my-8 text-center md:text-left text-sm md:text-base lg:t
 export default ({
   subheading = "Plantel Docente",
   heading = <>Pasión y Compromiso</>,
-  description = "Somos un equipo dedicado y amoroso, de múltiples voces. Entre todos construímos nuestra visión pedagógica, en evolución constante.",
+  description = "Somos un equipo dedicado y atento, de múltiples voces. Entre todos construímos nuestra visión pedagógica, en evolución constante.",
   imageSrc = plantelDocenteImg,
   imageRounded = true,
   imageBorder = true,

@@ -33,7 +33,7 @@ export const PrimaryLink = tw(NavLink)`
   border-b-0
 `;
 
-export const LogoLink = styled(NavLink)`
+export const LogoLink = styled.a`
   ${tw`flex items-center font-black border-b-0 ml-0!`};
 
   img {
@@ -53,7 +53,7 @@ export const MobileNavLinks = motion.custom(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-around items-center
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
