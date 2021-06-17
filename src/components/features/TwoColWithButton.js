@@ -26,18 +26,15 @@ const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4x
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-gray-900 `;
 
 export default ({
-  subheading = "Our Expertise",
-  heading = (
-    <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
-    </>
-  ),
-  description = "Somos una Cooperativa de Enseñanza fundada en 1935. Desde entonces hemos construído un espacio inclusivo, a través de un equipo directivo y docente de inquebrantable vocación y compromiso.",
-  imageSrc = null,
+  subheading,
+  heading,
+  description,
+  imageSrc,
+  backgroundColor,
   imageRounded = true,
   imageBorder = false,
   imageShadow = true,
-  imageCss = null,
+  imageCss,
   imageDecoratorBlob = true,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
@@ -46,7 +43,7 @@ export default ({
 
   return (
     <div className="twocolwithbuttons__container">
-      <TwoColumn>
+      <TwoColumn style={backgroundColor}>
         <ImageColumn>
           <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}

@@ -15,7 +15,7 @@ import planDeEstudiosEDIImg from "../../images/new/edi_500.jpg";
 const Container = tw.div`relative`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-8`}
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg -mx-8 px-8 py-10 sm:py-20 bg-yellow-400`}
 `;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full text-3xl sm:text-4xl`;
@@ -24,20 +24,20 @@ const Description = tw(SectionDescription)`w-full text-center`;
 const VerticalSpacer = tw.div`mt-10 w-full`;
 
 const Column = styled.div`
-  ${tw`md:w-1/2 lg:w-1/3 max-w-sm mb-8`}
+  ${tw`lg:w-1/3 max-w-sm mb-8`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 pb-2 border rounded-2xl bg-gray-100`}
+  ${tw`flex flex-col items-center text-center w-full px-2 pb-2 border rounded-2xl bg-gray-100`}
   .imageContainer {
-    ${tw`border text-center rounded-full p-5 flex-shrink-0`}
+    ${tw`border rounded-full flex-shrink-0`}
     img {
       ${tw`w-4 h-4`}
     }
   }
 
   .textContainer {
-    ${tw`sm:ml-4 mt-4 sm:mt-2`}
+    ${tw`mt-2`}
   }
 
   .img {

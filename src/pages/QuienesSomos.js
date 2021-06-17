@@ -23,6 +23,7 @@ export default () => {
         heading="Pioneros del cooperativismo"
         buttonRounded={false}
         imageSrc={quienesSomosImg}
+        description="Somos una Cooperativa de Enseñanza fundada en 1935. Desde entonces hemos construído un espacio inclusivo, a través de un equipo directivo y docente de inquebrantable vocación y compromiso."
       />
       <TwoColWithButton
         subheading={<Subheading>Proyecto educativo</Subheading>}
@@ -31,6 +32,7 @@ export default () => {
         textOnLeft={false}
         imageSrc={proyectoEducativoImg}
         description="Trabajamos con grupos reducidos, priorizando los aspectos humanos y sociales de los adolescentes. Nuestro propósito: que descubran recursos y habilidades, amplíen sus horizontes, cooperen con sus pares."
+        backgroundColor={{ backgroundColor: "#ecc94b", marginLeft: "-2em", marginRight: "-2em", paddingRight: "2em", paddingLeft: "2em" }}
       />
       <TwoColWithButton
         subheading={<Subheading>Nuestros Valores</Subheading>}

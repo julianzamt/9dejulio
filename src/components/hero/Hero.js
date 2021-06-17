@@ -47,7 +47,7 @@ const SlantedBackground = styled.span`
   }
 `;
 
-const Notification = tw.span`text-center sm:inline-block my-4 pl-3 py-1 sm:border-l-4 sm:border-yellow-500 font-medium text-sm`;
+const Notification = tw.div`text-center my-4 pl-3 py-1 lg:border-l-4 lg:border-yellow-500 font-medium text-sm`;
 const SubTitle = tw.div`mt-4 font-medium text-sm border-b-4 border-yellow-500 py-2`;
 const PrimaryAction = tw.button`px-16 py-4 text-sm mt-10 sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 text-primary-500 font-bold rounded shadow transition duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
 const InnerImg = tw.img`rounded-xl shadow-xl hidden w-10/12 lg:block`;

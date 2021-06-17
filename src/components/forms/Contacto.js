@@ -10,7 +10,7 @@ import "./Contacto.css";
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
-const Title = tw.h2`sm:inline-block text-center sm:text-left`;
+const Title = tw.h2`text-center`;
 const SubTitle = tw.h5`text-xs text-center -mx-8 mt-2 p-4 `;
 
 const FormContainer = styled.div`
@@ -37,13 +37,15 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`flex justify-center items-center w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`flex justify-center items-center w-full md:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(
   SvgDotPatternIcon
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
-const ButtonFeedbackContainer = tw.div`flex items-baseline`;
+const ButtonFeedbackContainer = tw.div`flex items-baseline md:justify-center lg:justify-between`;
+
+const MESSAGE_PLACEHOLDER = "Si desea que lo contactemos telefónicamente, por favor indique su número.";
 
 export default () => {
   // Send Form message Logic
@@ -52,7 +54,7 @@ export default () => {
   const [user_name, setUser_name] = useState("");
   const [user_email, setUser_email] = useState("");
   const [message, setMessage] = useState("");
-  const [messagePlaceholder, setMessagePlaceholder] = useState("Si desea que lo contactemos telefónicamente, por favor indique su número.");
+  const [messagePlaceholder, setMessagePlaceholder] = useState(MESSAGE_PLACEHOLDER);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -105,7 +107,7 @@ export default () => {
                       value={message}
                       placeholder={messagePlaceholder}
                       onFocus={e => setMessagePlaceholder("")}
-                      onBlur={e => setMessagePlaceholder("Si desea que lo contactemos telefónicamente, por favor indique su número.")}
+                      onBlur={e => setMessagePlaceholder(MESSAGE_PLACEHOLDER)}
                       onChange={e => setMessage(e.target.value)}
                       required
                     />

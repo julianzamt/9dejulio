@@ -6,8 +6,8 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import plantelDocenteImg from "../../images/new/PlantelDocente_500.jpg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 
-const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto sm:py-20 md:py-10 items-center`;
+const Container = tw.div`relative mb-16 md:mb-0`;
+const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto sm:py-12 md:py-20 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
 const TextColumn = styled(Column)(props => [

@@ -36,7 +36,6 @@ const SocialLink = styled.a`
   }
 `;
 
-const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col sm:flex-row justify-between items-center`;
 const CopyrightNotice = tw.div`text-xs text-center`;
 
 const Divider = tw.div`my-8 border-b-2 border-yellow-500`;
@@ -109,11 +108,9 @@ export default () => {
           </Column>
         </FiveColumns>
         <Divider />
-        <CopyrightAndCompanyInfoRow>
-          <CopyrightNotice>
-            &copy; 2021 Julián Zamt. <br></br>React template Treact Inc.<br></br>
-          </CopyrightNotice>
-        </CopyrightAndCompanyInfoRow>
+        <CopyrightNotice>
+          &copy; 2021 Julián Zamt. <br></br>React template Treact Inc.<br></br>
+        </CopyrightNotice>
         <Divider />
         <CopyrightNotice>
           <a className="ley" href="http://www.sinigep.info/docs/adjuntos/Ley268120201001153427.pdf" target="_blank" rel="noopener noreferrer">

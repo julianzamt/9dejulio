@@ -8,7 +8,7 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-8 sm:py-20 md:py-32 items-center`;
+const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-8 sm:py-12 md:py-20 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
 const TextColumn = styled(Column)(props => [
