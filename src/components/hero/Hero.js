@@ -3,16 +3,29 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import heroBackgroundImageVertical from "../../images/new/entrada_500.jpg";
-import heroBackgroundImageHorizontal from "../../images/new/chicos_cool_1500.jpg";
-import innerHero from "../../images/new/chicos_cool_1500.jpg";
+import heroBackgroundImage500 from "../../images/new/entrada_con_chicos_500.jpg";
+import heroBackgroundImage1000 from "../../images/new/entrada_con_chicos_1000.jpg";
+import heroBackgroundImage1500 from "../../images/new/entrada_con_chicos_1500.jpg";
+import heroBackgroundImage1500TwoColumns from "../../images/new/entrada_apaisada.jpg";
+import innerHero500 from "../../images/new/grupal.jpg";
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import { HashLink } from "react-router-hash-link";
 import { ImFacebook2 } from "react-icons/im";
 
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen`}
-  background-image: url(${heroBackgroundImageVertical});
+  @media (max-width: 450px) {
+    background-image: url(${heroBackgroundImage500});
+  }
+  @media (max-width: 720px) {
+    background-image: url(${heroBackgroundImage1000});
+  }
+  @media (max-width: 1024px) {
+    background-image: url(${heroBackgroundImage1500});
+  }
+  @media (min-width: 1025px) {
+    background-image: url(${heroBackgroundImage1500TwoColumns});
+  }
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-gray-900 opacity-50`;
@@ -111,7 +124,7 @@ export default () => {
             </Redes>
           </LeftColumn>
           <RightColumn>
-            <InnerImg src={innerHero} alt="innerHero" />
+            <InnerImg src={innerHero500} alt="innerHero" />
           </RightColumn>
         </TwoColumn>
       </HeroContainer>

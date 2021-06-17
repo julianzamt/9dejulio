@@ -16,7 +16,7 @@ const TextColumn = styled(Column)(props => [
 const Image = styled.img(props => [props.imageRounded && tw`rounded`, props.imageBorder && tw`border`, props.imageShadow && tw`shadow`]);
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
-  tw`w-20 h-20 lg:w-24 lg:h-24 absolute mr-5 lg:mr-10 right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-700 -z-10`,
+  tw`w-20 h-20 absolute mr-5 right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-700 -z-10`,
 ]);
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left text-justify`;

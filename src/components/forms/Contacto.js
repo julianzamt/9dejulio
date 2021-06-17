@@ -110,6 +110,7 @@ export default () => {
                       onBlur={e => setMessagePlaceholder(MESSAGE_PLACEHOLDER)}
                       onChange={e => setMessage(e.target.value)}
                       required
+                      className="placeholder"
                     />
                   </InputContainer>
                 </Column>

@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import plantelDocenteImg from "../../images/new/PlantelDocente_500.jpg";
+import plantelDocenteImg from "../../images/new/PlantelDocente_1000.jpg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 
 const Container = tw.div`relative mb-16 md:mb-0`;
@@ -19,7 +19,7 @@ const Image = styled.img(props => [props.imageRounded && tw`rounded`, props.imag
 
 const DecoratorBlob = tw(
   SvgDotPattern
-)`w-20 h-20 lg:w-24 lg:h-24 lg:mr-12 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-600 -z-10`;
+)`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-600 -z-10`;
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 

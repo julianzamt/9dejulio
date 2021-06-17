@@ -1,14 +1,33 @@
 .feedback__contact {
-    color: pink;
-    margin-left: 1em;
-    animation: fadeIn 5s ease-in-out;
-    animation-fill-mode: both;
-    opacity: 0;
+  color: pink;
+  margin-left: 1em;
+  animation: fadeIn 5s ease-in-out;
+  animation-fill-mode: both;
+  opacity: 0;
 }
 
 @keyframes fadeIn {
-    20% {opacity: 1}
-    80% {opacity: 1}
-    100% {opacity:0}
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
+.placeholder::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 0.7em;
+}
+.placeholder::-moz-placeholder {
+  font-size: 0.7em;
+}
+.placeholder:-ms-input-placeholder {
+  font-size: 0.7em;
+}
+.placeholder:-moz-placeholder {
+  font-size: 0.7em;
+}

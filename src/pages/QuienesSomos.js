@@ -4,9 +4,9 @@ import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import TwoColWithButton from "components/features/TwoColWithButton.js";
 import PorQueElegirnos from "components/features/PorQueElegirnos.js";
-import proyectoEducativoImg from "../images/new/computacion_profe_500.jpg";
-import quienesSomosImg from "../images/new/remera_500.jpg";
-import nuestrosValoresImg from "../images/new/chicos_cool_500.jpg";
+import proyectoEducativoImg from "../images/new/computacion_profe_1000.jpg";
+import quienesSomosImg from "../images/new/remera_1000.jpg";
+import nuestrosValoresImg from "../images/new/chicos_cool_1000.jpg";
 
 import EarIcon from "images/ear.svg";
 import cooperativismoIcon from "images/iconmonstr-handshake-2.svg";
