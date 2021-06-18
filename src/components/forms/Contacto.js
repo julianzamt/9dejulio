@@ -23,7 +23,7 @@ const FormContainer = styled.div`
   }
   input,
   textarea {
-    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-gray-100 hocus:border-yellow-500 focus:outline-none transition duration-200`};
+    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-gray-100 hocus:border-yellow-500 focus:outline-none transition-transform duration-200`};
 
     ::placeholder {
       ${tw`text-gray-500`}
@@ -37,13 +37,13 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`flex justify-center items-center w-full md:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`flex justify-center items-center w-full md:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition-transform duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(
   SvgDotPatternIcon
 )`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`;
 
-const ButtonFeedbackContainer = tw.div`flex items-baseline md:justify-center`;
+const ButtonFeedbackContainer = tw.div`flex flex-col items-baseline md:items-center`;
 
 const MESSAGE_PLACEHOLDER = "Si desea que lo contactemos telefónicamente, por favor indique su número.";
 
@@ -118,7 +118,7 @@ export default () => {
               <ButtonFeedbackContainer>
                 {isLoading ? (
                   <SubmitButton>
-                    <ThreeDots fill="pink" width="70px" height="1.3em" />
+                    <ThreeDots fill="#ecc94b" width="70px" height="1.3em" />
                   </SubmitButton>
                 ) : (
                   <SubmitButton type="submit" value="Submit">

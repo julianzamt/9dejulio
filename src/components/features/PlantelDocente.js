@@ -15,7 +15,11 @@ const TextColumn = styled(Column)(props => [
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`,
 ]);
 
-const Image = styled.img(props => [props.imageRounded && tw`rounded`, props.imageBorder && tw`border`, props.imageShadow && tw`shadow`]);
+const Image = styled.img(props => [
+  props.imageRounded && tw`rounded-DEFAULT`,
+  props.imageBorder && tw`border-0`,
+  props.imageShadow && tw`shadow-DEFAULT`,
+]);
 
 const DecoratorBlob = tw(
   SvgDotPattern

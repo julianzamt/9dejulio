@@ -3,9 +3,6 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import heroBackgroundImage500 from "../../images/new/entrada_con_chicos_500.jpg";
-import heroBackgroundImage1000 from "../../images/new/entrada_con_chicos_1000.jpg";
-import heroBackgroundImage1500 from "../../images/new/entrada_con_chicos_1500.jpg";
 import heroBackgroundImage1500TwoColumns from "../../images/new/entrada_apaisada.jpg";
 import innerHero500 from "../../images/new/grupal.jpg";
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -14,18 +11,7 @@ import { ImFacebook2 } from "react-icons/im";
 
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen`}
-  @media (max-width: 450px) {
-    background-image: url(${heroBackgroundImage500});
-  }
-  @media (max-width: 720px) {
-    background-image: url(${heroBackgroundImage1000});
-  }
-  @media (max-width: 1024px) {
-    background-image: url(${heroBackgroundImage1500});
-  }
-  @media (min-width: 1025px) {
-    background-image: url(${heroBackgroundImage1500TwoColumns});
-  }
+  background-image: url(${heroBackgroundImage1500TwoColumns});
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-gray-900 opacity-50`;
@@ -63,10 +49,10 @@ const SlantedBackground = styled.span`
 
 const Notification = tw.div`text-center my-4 pl-3 py-1 lg:text-left lg:border-l-4 lg:border-yellow-500 font-medium text-sm`;
 const SubTitle = tw.div`mt-4 font-medium text-sm border-b-4 border-yellow-500 py-2`;
-const PrimaryAction = tw.button`px-16 py-4 mt-16 text-sm sm:text-base sm:px-8 bg-gray-100 text-primary-500 font-bold rounded shadow transition duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
+const PrimaryAction = tw.button`px-16 py-4 mt-16 text-sm sm:text-base sm:px-8 bg-gray-100 text-primary-500 font-bold rounded-DEFAULT shadow-DEFAULT transition-transform duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
 const InnerImg = tw.img`rounded-xl shadow-xl hidden w-10/12 lg:block`;
 const Redes = tw.span`absolute bottom-0 text-gray-100 text-center mb-8 text-4xl lg:hidden`;
-const RedesLG = tw.span`hidden lg:block text-gray-100 text-xl transition duration-300
+const RedesLG = tw.span`hidden lg:block text-gray-100 text-xl transition-transform duration-300
 hover:text-yellow-500`;
 
 export default () => {

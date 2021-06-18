@@ -13,16 +13,20 @@ const TextColumn = styled(Column)(props => [
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first text-justify` : tw`md:ml-12 lg:ml-16 md:order-last text-justify`,
 ]);
 
-const Image = styled.img(props => [props.imageRounded && tw`rounded`, props.imageBorder && tw`border`, props.imageShadow && tw`shadow`]);
+const Image = styled.img(props => [
+  props.imageRounded && tw`rounded-DEFAULT`,
+  props.imageBorder && tw`border-0`,
+  props.imageShadow && tw`shadow-DEFAULT`,
+]);
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
   tw`w-20 h-20 absolute mr-5 right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-yellow-700 -z-10`,
 ]);
 
-const TextContent = tw.div`lg:py-8 text-center md:text-left text-justify`;
+const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
-const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const Heading = tw(SectionHeading)`mt-4 font-black text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-gray-900 `;
 
 export default ({
@@ -30,6 +34,7 @@ export default ({
   heading,
   description,
   imageSrc,
+  imageSrcSet,
   backgroundColor,
   imageRounded = true,
   imageBorder = false,
@@ -45,7 +50,7 @@ export default ({
     <div className="twocolwithbuttons__container">
       <TwoColumn style={backgroundColor}>
         <ImageColumn>
-          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
+          <Image css={imageCss} src={imageSrc} srcSet={imageSrcSet} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>

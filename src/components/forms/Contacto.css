@@ -1,6 +1,6 @@
 .feedback__contact {
-  color: pink;
-  margin-left: 1em;
+  color: #ecc94b;
+  margin-top: 1em;
   animation: fadeIn 5s ease-in-out;
   animation-fill-mode: both;
   opacity: 0;

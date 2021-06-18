@@ -3,9 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
-import { ReactComponent as SvgDecoratorBlob6 } from "images/svg-decorator-blob-6.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-8 sm:py-12 md:py-20 items-center`;
@@ -16,7 +14,7 @@ const TextColumn = styled(Column)(props => [
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`,
 ]);
 
-const Map = tw.iframe`rounded-xl shadow w-full h-64`;
+const Map = tw.iframe`rounded-xl shadow-DEFAULT w-full h-64`;
 
 const DecoratorBlobPink = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute bottom-0 left-0 w-64 opacity-25 transform -translate-x-40 translate-y-56`}

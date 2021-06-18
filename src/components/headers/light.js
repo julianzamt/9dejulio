@@ -23,13 +23,13 @@ export const NavLinks = tw.div`inline-block`;
  */
 export const NavLink = tw.a`
   my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
+  font-semibold tracking-wide transition-transform duration-300
   hover:text-yellow-500 hover:border-b-2 hover:border-yellow-500
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-1 rounded bg-primary-300 text-gray-100
+  px-8 py-1 rounded-DEFAULT bg-primary-300 text-gray-100
   border-b-0
 `;
 
@@ -43,7 +43,7 @@ export const LogoLink = styled.a`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition-transform duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-2 text-center rounded-lg text-gray-900 bg-white`}

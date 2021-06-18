@@ -19,7 +19,7 @@ const ColumnHeading = tw.h5`font-bold uppercase`;
 
 const LinkList = tw.ul`sm:mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300`;
+const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition-transform duration-300`;
 
 const LogoContainer = tw.div`flex items-center justify-center`;
 const LogoImg = tw.img`w-8`;
@@ -29,7 +29,7 @@ const CompanyAddress = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto leading-lo
 
 const SocialLinksContainer = tw.div`mt-4 text-center`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-500 transition duration-300 mr-4 last:mr-0`}
+  ${tw`cursor-pointer inline-block p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-500 transition-transform duration-300 mr-4 last:mr-0`}
   svg {
     ${tw`w-4 h-4`}
   }

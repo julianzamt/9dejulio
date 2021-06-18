@@ -25,9 +25,9 @@ const Column = styled.div`
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col items-center text-center w-full px-2 pb-2 border rounded-2xl bg-gray-100`}
+  ${tw`flex flex-col items-center text-center w-full px-2 pb-2 border-0 rounded-2xl bg-gray-100`}
   .imageContainer {
-    ${tw`border rounded-full flex-shrink-0`}
+    ${tw`border-0 rounded-full flex-shrink-0`}
     img {
       ${tw`w-4 h-4`}
     }
@@ -38,7 +38,7 @@ const Card = styled.div`
   }
 
   .img {
-    ${tw`border rounded-lg mb-4`}
+    ${tw`border-0 rounded-lg mb-4`}
   }
 
   .title {

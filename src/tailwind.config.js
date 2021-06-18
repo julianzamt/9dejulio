@@ -4,12 +4,11 @@ module.exports = {
   separator: ":",
   theme: {
     screens: {
-      xs: { max: "575px" }, // Mobile (iPhone 3 - iPhone XS Max).
-      sm: { min: "576px", max: "897px" }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
-      md: { min: "898px", max: "1199px" }, // Tablet (matches max: iPad Pro @ 1112px).
-      lg: { min: "1200px" }, // Desktop smallest.
-      xl: { min: "1159px" }, // Desktop wide.
-      xxl: { min: "1359px" }, // Desktop widescreen.
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
     },
     colors: {
       transparent: "transparent",
@@ -198,12 +197,12 @@ module.exports = {
     },
     borderColor: theme => ({
       ...theme("colors"),
-      default: theme("colors.gray.300", "currentColor"),
+      DEFAULT: theme("colors.gray.300", "currentColor"),
     }),
     borderRadius: {
       none: "0",
       sm: "0.125rem",
-      default: "0.25rem",
+      DEFAULT: "0.25rem",
       md: "0.375rem",
       lg: "0.5rem",
       xl: "0.75rem",
@@ -215,7 +214,7 @@ module.exports = {
       full: "9999px",
     },
     borderWidth: {
-      default: "1px",
+      DEFAULT: "1px",
       0: "0",
       2: "2px",
       4: "4px",
@@ -224,7 +223,7 @@ module.exports = {
     boxShadow: {
       xs: "0 0 0 1px rgba(0, 0, 0, 0.05)",
       sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-      default: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+      DEFAULT: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
       md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
       xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
@@ -237,7 +236,7 @@ module.exports = {
     container: {},
     cursor: {
       auto: "auto",
-      default: "default",
+      default: "DEFAULT",
       pointer: "pointer",
       wait: "wait",
       text: "text",
@@ -249,6 +248,7 @@ module.exports = {
       current: "currentColor",
     },
     flex: {
+      100: "1 1 100%",
       1: "1 1 0%",
       auto: "1 1 auto",
       initial: "0 1 auto",
@@ -256,11 +256,11 @@ module.exports = {
     },
     flexGrow: {
       0: "0",
-      default: "1",
+      DEFAULT: "1",
     },
     flexShrink: {
       0: "0",
-      default: "1",
+      DEFAULT: "1",
     },
     fontFamily: {
       display: ["Inter", "system-ui"],
@@ -654,7 +654,7 @@ module.exports = {
     transitionProperty: {
       none: "none",
       all: "all",
-      default: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+      DEFAULT: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
       colors: "background-color, border-color, color, fill, stroke",
       opacity: "opacity",
       shadow: "box-shadow",

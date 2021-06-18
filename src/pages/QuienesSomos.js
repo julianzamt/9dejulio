@@ -4,9 +4,12 @@ import styled from "styled-components"; //eslint-disable-line
 import { css } from "styled-components/macro"; //eslint-disable-line
 import TwoColWithButton from "components/features/TwoColWithButton.js";
 import PorQueElegirnos from "components/features/PorQueElegirnos.js";
-import proyectoEducativoImg from "../images/new/computacion_profe_1000.jpg";
-import quienesSomosImg from "../images/new/remera_1000.jpg";
-import nuestrosValoresImg from "../images/new/chicos_cool_1000.jpg";
+import proyectoEducativoImg_500 from "../images/new/computacion_profe_500.jpg";
+import proyectoEducativoImg_1000 from "../images/new/computacion_profe_1000.jpg";
+import quienesSomosImg_500 from "../images/new/remera_500.jpg";
+import quienesSomosImg_1000 from "../images/new/remera_1000.jpg";
+import nuestrosValoresImg_500 from "../images/new/chicos_cool_500.jpg";
+import nuestrosValoresImg_1000 from "../images/new/chicos_cool_1000.jpg";
 
 import EarIcon from "images/ear.svg";
 import cooperativismoIcon from "images/iconmonstr-handshake-2.svg";
@@ -22,7 +25,8 @@ export default () => {
         subheading={<Subheading>Quiénes Somos</Subheading>}
         heading="Pioneros del cooperativismo"
         buttonRounded={false}
-        imageSrc={quienesSomosImg}
+        imageSrc={quienesSomosImg_500}
+        imageSrcSet={`${quienesSomosImg_500} 500w, ${quienesSomosImg_1000} 501w`}
         description="Somos una Cooperativa de Enseñanza fundada en 1935. Desde entonces hemos construído un espacio inclusivo, a través de un equipo directivo y docente de inquebrantable vocación y compromiso."
       />
       <TwoColWithButton
@@ -30,7 +34,8 @@ export default () => {
         heading="Acompañamos el crecimiento"
         buttonRounded={false}
         textOnLeft={false}
-        imageSrc={proyectoEducativoImg}
+        imageSrc={proyectoEducativoImg_500}
+        imageSrcSet={`${proyectoEducativoImg_500} 500w, ${proyectoEducativoImg_1000} 501w`}
         description="Trabajamos con grupos reducidos, priorizando los aspectos humanos y sociales de los adolescentes. Nuestro propósito: que descubran recursos y habilidades, amplíen sus horizontes, cooperen con sus pares."
         backgroundColor={{ backgroundColor: "#ecc94b", marginLeft: "-2em", marginRight: "-2em", paddingRight: "2em", paddingLeft: "2em" }}
       />
@@ -39,12 +44,13 @@ export default () => {
         heading="Cooperativismo, Autonomía, Inclusión."
         buttonRounded={false}
         textOnLeft={false}
-        imageSrc={nuestrosValoresImg}
+        imageSrc={nuestrosValoresImg_500}
+        imageSrcSet={`${nuestrosValoresImg_500} 500w, ${nuestrosValoresImg_1000} 501w`}
         description="Cooperativismo para hacer realidad los proyectos que nos unen. Autonomía para crecer. Inclusión para aprender a escucharnos."
       />
       <PorQueElegirnos
         subheading={<Subheading>Por Qué Elegirnos</Subheading>}
-        heading="Experiencia y seguimiento individualizado."
+        heading="Experiencia y acompañamiento individualizado."
         description="Disponemos de estrategias institucionales únicas para fortalecer las trayectorias escolares de todos nuestros alumnos."
         cards={[
           {
