@@ -2,3 +2,7 @@
   font-size: 0.5em;
   font-weight: 500;
 }
+
+.hero__socialMediaIcons:nth-child(2) {
+  margin-left: 1em;
+}

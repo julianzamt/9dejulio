@@ -5,8 +5,11 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import logo from "../../images/logo_9dejulio.png";
 import { ImFacebook2 } from "react-icons/im";
+import { ImInstagram } from "react-icons/im";
 import { HashLink } from "react-router-hash-link";
 import "./Footer2.css";
+import logoTauro from "../../images/logo_tauro.png";
+import logoAlma from "../../images/ALMAPRINT LOGO.png";
 
 const Container = tw.div`relative bg-primary-900 text-gray-300 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
@@ -50,8 +53,11 @@ export default () => {
             </LogoContainer>
             <CompanyAddress>La Rioja 660 CABA (011)4931-1578</CompanyAddress>
             <SocialLinksContainer>
-              <SocialLink href="https://facebook.com" target="_blank" rel="noreferrer">
+              <SocialLink href="https://www.facebook.com/institutoprivado9dejulio" target="_blank" rel="noreferrer">
                 <ImFacebook2 />
+              </SocialLink>
+              <SocialLink href="https://www.instagram.com/institutoprivado9dejulio/" target="_blank" rel="noreferrer">
+                <ImInstagram />
               </SocialLink>
             </SocialLinksContainer>
           </CompanyColumn>
@@ -103,6 +109,14 @@ export default () => {
             </LinkList>
           </Column>
         </FiveColumns>
+        <Divider />
+        <div style={{ textAlign: "center", fontSize: "small" }}>
+          El Instituto Privado 9 de Julio cuenta con el apoyo de:
+          <div className="footer__logoAuspiciantes-container">
+            <img src={logoTauro} alt="logo tauro" className="footer__logoAuspiciantes" />
+            <img src={logoAlma} alt="logo alma" className="footer__logoAuspiciantes" />
+          </div>
+        </div>
         <Divider />
         <CopyrightNotice>
           &copy; 2021 Julián Zamt. <br></br>React template Treact Inc.<br></br>

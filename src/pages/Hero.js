@@ -8,6 +8,7 @@ import innerHero500 from "../images/new/grupal.jpg";
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../components/headers/light.js";
 import { HashLink } from "react-router-hash-link";
 import { ImFacebook2 } from "react-icons/im";
+import { ImInstagram } from "react-icons/im";
 
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen`}
@@ -51,8 +52,8 @@ const Notification = tw.div`text-center my-4 pl-3 py-1 lg:text-left lg:border-l-
 const SubTitle = tw.div`mt-4 font-medium text-sm border-b-4 border-yellow-500 py-2`;
 const PrimaryAction = tw.button`px-16 py-4 mt-16 text-sm sm:text-base sm:px-8 bg-gray-100 text-primary-500 font-bold rounded-DEFAULT shadow-DEFAULT transition-transform duration-300 hocus:bg-primary-500 hocus:text-gray-100 focus:shadow-outline`;
 const InnerImg = tw.img`rounded-xl shadow-xl hidden w-10/12 lg:block`;
-const Redes = tw.span`absolute bottom-0 text-gray-100 text-center mb-8 text-4xl lg:hidden`;
-const RedesLG = tw.span`hidden lg:block text-gray-100 text-xl transition-transform duration-300
+const Redes = tw.span`flex absolute bottom-0 text-gray-100 text-center mb-8 text-4xl lg:hidden`;
+const RedesLG = tw.span`hidden lg:flex text-gray-100 text-xl transition-transform duration-300
 hover:text-yellow-500`;
 
 export default () => {
@@ -78,8 +79,12 @@ export default () => {
     </NavLinks>,
     <NavLinks key={3}>
       <RedesLG>
-        <a href="https://www.facebook.com/institutoprivado9dejulio/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/institutoprivado9dejulio/" target="_blank" rel="noopener noreferrer" className="hero__socialMediaIcons">
           <ImFacebook2 />{" "}
+        </a>
+
+        <a href="https://www.instagram.com/institutoprivado9dejulio/" target="_blank" rel="noopener noreferrer" className="hero__socialMediaIcons">
+          <ImInstagram />
         </a>
       </RedesLG>
     </NavLinks>,
@@ -104,8 +109,19 @@ export default () => {
               </HashLink>
             </Heading>
             <Redes>
-              <a href="https://www.facebook.com/institutoprivado9dejulio/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/institutoprivado9dejulio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero__socialMediaIcons">
                 <ImFacebook2 />{" "}
+              </a>
+              <a
+                href="https://www.instagram.com/institutoprivado9dejulio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero__socialMediaIcons">
+                <ImInstagram />
               </a>
             </Redes>
           </LeftColumn>

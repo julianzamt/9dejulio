@@ -1,8 +1,29 @@
 .ley {
-    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 .ley:hover {
-    color: pink;
-    font-size: 1.01em;
+  color: pink;
+  font-size: 1.01em;
+}
+
+.footer__logoAuspiciantes-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2em;
+}
+
+.footer__logoAuspiciantes {
+  width: 40vw;
+}
+
+.footer__logoAuspiciantes:last-of-type {
+  margin-left: 1em;
+}
+
+@media (min-width: 480px) {
+  .footer__logoAuspiciantes {
+    width: 200px;
+  }
 }
